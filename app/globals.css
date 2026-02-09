@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d1117;
+  --foreground: #c9d1d9;
+  --syntax-blue: #58a6ff;
+  --syntax-green: #3fb950;
+  --syntax-purple: #bc8cff;
+  --syntax-orange: #ff7b72;
+  --syntax-yellow: #d29922;
+  --syntax-cyan: #39c5cf;
+  --terminal-green: #00ff41;
+  --code-block: #21262d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Terminal window styling */
+.terminal-window {
+  background: var(--code-block);
+  border: 1px solid rgba(125, 125, 125, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: var(--font-geist-mono);
+}
+
+/* Code block styling */
+.code-block {
+  background: var(--code-block);
+  border-left: 3px solid var(--syntax-blue);
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: var(--font-geist-mono);
+}
+
+/* Glow effects */
+.glow-blue:hover {
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-green:hover {
+  box-shadow: 0 0 20px rgba(63, 185, 80, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-cyan:hover {
+  box-shadow: 0 0 20px rgba(57, 197, 207, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Monospace utilities */
+.mono {
+  font-family: var(--font-geist-mono);
+}
+
+/* Syntax highlighting colors */
+.text-syntax-blue {
+  color: var(--syntax-blue);
+}
+
+.text-syntax-green {
+  color: var(--syntax-green);
+}
+
+.text-syntax-purple {
+  color: var(--syntax-purple);
+}
+
+.text-syntax-orange {
+  color: var(--syntax-orange);
+}
+
+.text-syntax-yellow {
+  color: var(--syntax-yellow);
+}
+
+.text-syntax-cyan {
+  color: var(--syntax-cyan);
+}
+
+.text-terminal-green {
+  color: var(--terminal-green);
+}

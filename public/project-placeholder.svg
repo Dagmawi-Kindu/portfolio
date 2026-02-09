@@ -1,0 +1,16 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0d1117"/>
+  <rect x="50" y="50" width="700" height="350" fill="#21262d" stroke="#58a6ff" stroke-width="2" stroke-dasharray="5,5"/>
+  <rect x="70" y="70" width="660" height="40" fill="#161b22"/>
+  <circle cx="90" cy="90" r="8" fill="#ff7b72"/>
+  <circle cx="110" cy="90" r="8" fill="#d29922"/>
+  <circle cx="130" cy="90" r="8" fill="#3fb950"/>
+  <text x="400" y="95" font-family="monospace" font-size="14" fill="#8b949e" text-anchor="middle">project.tsx</text>
+  <rect x="70" y="120" width="200" height="20" fill="#58a6ff" opacity="0.3"/>
+  <rect x="70" y="150" width="300" height="20" fill="#39c5cf" opacity="0.3"/>
+  <rect x="70" y="180" width="250" height="20" fill="#3fb950" opacity="0.3"/>
+  <rect x="70" y="210" width="180" height="20" fill="#bc8cff" opacity="0.3"/>
+  <text x="400" y="250" font-family="monospace" font-size="18" fill="#c9d1d9" text-anchor="middle">Project Image</text>
+  <text x="400" y="280" font-family="monospace" font-size="14" fill="#8b949e" text-anchor="middle">800x450</text>
+</svg>
+
