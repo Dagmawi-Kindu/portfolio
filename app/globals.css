@@ -135,3 +135,22 @@ body {
 .text-terminal-green {
   color: var(--terminal-green);
 }
+
+/* Popup description scroll area – subtle scrollbar */
+.overflow-y-auto.pr-1 {
+  scrollbar-width: thin;
+  scrollbar-color: var(--code-block) transparent;
+}
+
+.overflow-y-auto.pr-1::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto.pr-1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-y-auto.pr-1::-webkit-scrollbar-thumb {
+  background: var(--code-block);
+  border-radius: 3px;
+}
