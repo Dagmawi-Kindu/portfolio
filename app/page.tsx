@@ -497,49 +497,39 @@ export default function Home() {
               tabIndex={0}
               onClick={() => setTmsPopupOpen(true)}
               onKeyDown={(e) => e.key === "Enter" && setTmsPopupOpen(true)}
-              className="group relative overflow-hidden rounded-xl border-2 border-[#21262d] bg-[#0d1117] hover:border-syntax-cyan transition-all duration-300 glow-cyan cursor-pointer"
+              className="group relative overflow-hidden rounded-xl border-2 border-[#21262d] bg-[#0d1117] hover:border-syntax-cyan transition-all duration-300 glow-cyan cursor-pointer flex flex-col"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-56 overflow-hidden shrink-0">
                 <Image
                   src="/assets/tms1.png"
                   alt="Terminal Management System"
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent"></div>
-                <div className="absolute top-4 right-4">
-                  <div className="terminal-window px-3 py-1 mono text-xs text-syntax-green">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/40 to-transparent" />
+                <div className="absolute top-3 right-3">
+                  <span className="mono text-[10px] font-semibold px-2.5 py-1 rounded-md bg-syntax-cyan/20 text-syntax-cyan border border-syntax-cyan/40">
                     Team Lead
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="mono text-syntax-cyan text-2xl font-bold mb-2">
-                  Terminal Management System
-                </h3>
-                <p className="text-[#8b949e] mb-4 line-clamp-2">
-                  IoT-based terminal management system with remote POS control,
-                  transaction management, and device monitoring.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <TechTag
-                    tech="NestJS"
-                    colorClass="text-syntax-cyan border-syntax-cyan/50"
-                  />
-                  <TechTag
-                    tech="MySQL"
-                    colorClass="text-syntax-green border-syntax-green/50"
-                  />
-                  <TechTag
-                    tech="Redis"
-                    colorClass="text-syntax-purple border-syntax-purple/50"
-                  />
-                  <span className="mono text-xs px-3 py-1 bg-[#21262d] text-syntax-orange border border-syntax-orange/50 rounded-full">
-                    BullMQ
                   </span>
                 </div>
-                <div className="mono text-sm text-syntax-blue hover:text-syntax-cyan transition-colors">
+                <div className="absolute bottom-3 left-3 right-3">
+                  <h3 className="mono text-syntax-cyan text-xl font-bold drop-shadow-lg">
+                    Terminal Management System
+                  </h3>
+                </div>
+              </div>
+              <div className="p-5 flex-1 flex flex-col border-t border-[#21262d] border-l-4 border-l-syntax-cyan bg-[#0d1117]/50">
+                <p className="text-[#8b949e] text-sm mb-4 line-clamp-2 flex-1">
+                  IoT-based terminal management with remote POS control, transaction management, and device monitoring.
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  <TechTag tech="NestJS" colorClass="text-syntax-cyan border-syntax-cyan/50" />
+                  <TechTag tech="MySQL" colorClass="text-syntax-green border-syntax-green/50" />
+                  <TechTag tech="Redis" colorClass="text-syntax-purple border-syntax-purple/50" />
+                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-orange border border-syntax-orange/50 rounded-full">BullMQ</span>
+                </div>
+                <div className="mono text-xs font-medium text-syntax-cyan group-hover:underline">
                   View Details →
                 </div>
               </div>
@@ -551,41 +541,33 @@ export default function Home() {
               tabIndex={0}
               onClick={() => setAdminPopupOpen(true)}
               onKeyDown={(e) => e.key === "Enter" && setAdminPopupOpen(true)}
-              className="group relative overflow-hidden rounded-xl border-2 border-[#21262d] bg-[#0d1117] hover:border-syntax-purple transition-all duration-300 glow-blue cursor-pointer"
+              className="group relative overflow-hidden rounded-xl border-2 border-[#21262d] bg-[#0d1117] hover:border-syntax-purple transition-all duration-300 glow-purple cursor-pointer flex flex-col"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-56 overflow-hidden shrink-0">
                 <Image
                   src="/assets/admin1.png"
                   alt="Arifpay Admin Dashboard"
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent"></div>
-              </div>
-              <div className="p-6">
-                <h3 className="mono text-syntax-purple text-2xl font-bold mb-2">
-                  Arifpay Admin Dashboard
-                </h3>
-                <p className="text-[#8b949e] mb-4 line-clamp-2">
-                  Comprehensive admin dashboard for merchant management, account
-                  monitoring, and transaction tracking.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <TechTag
-                    tech=".NET Core 8"
-                    colorClass="text-syntax-blue border-syntax-blue/50"
-                  />
-                  <TechTag
-                    tech="PostgreSQL"
-                    colorClass="text-syntax-green border-syntax-green/50"
-                  />
-                  <TechTag
-                    tech="React.js"
-                    colorClass="text-syntax-cyan border-syntax-cyan/50"
-                  />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/40 to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <h3 className="mono text-syntax-purple text-xl font-bold drop-shadow-lg">
+                    Arifpay Admin Dashboard
+                  </h3>
                 </div>
-                <div className="mono text-sm text-syntax-blue hover:text-syntax-purple transition-colors">
+              </div>
+              <div className="p-5 flex-1 flex flex-col border-t border-[#21262d] border-l-4 border-l-syntax-purple bg-[#0d1117]/50">
+                <p className="text-[#8b949e] text-sm mb-4 line-clamp-2 flex-1">
+                  Unified management platform for accounts, products, and payment activities with real-time monitoring and reporting.
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  <TechTag tech=".NET Core 8" colorClass="text-syntax-blue border-syntax-blue/50" />
+                  <TechTag tech="PostgreSQL" colorClass="text-syntax-green border-syntax-green/50" />
+                  <TechTag tech="React.js" colorClass="text-syntax-cyan border-syntax-cyan/50" />
+                </div>
+                <div className="mono text-xs font-medium text-syntax-purple group-hover:underline">
                   View Details →
                 </div>
               </div>
@@ -597,37 +579,32 @@ export default function Home() {
               tabIndex={0}
               onClick={() => setFmPopupOpen(true)}
               onKeyDown={(e) => e.key === "Enter" && setFmPopupOpen(true)}
-              className="group relative overflow-hidden rounded-xl border-2 border-[#21262d] bg-[#0d1117] hover:border-syntax-green transition-all duration-300 glow-green cursor-pointer"
+              className="group relative overflow-hidden rounded-xl border-2 border-[#21262d] bg-[#0d1117] hover:border-syntax-green transition-all duration-300 glow-green cursor-pointer flex flex-col"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-56 overflow-hidden shrink-0">
                 <Image
                   src="/assets/fm3.png"
                   alt="Arif FM"
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent"></div>
-              </div>
-              <div className="p-6">
-                <h3 className="mono text-syntax-green text-2xl font-bold mb-2">
-                  Arif FM
-                </h3>
-                <p className="text-[#8b949e] mb-4 line-clamp-2">
-                  Audio streaming platform for radio stations with live
-                  streaming, news features, and subscription management.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <TechTag
-                    tech="Flutter"
-                    colorClass="text-syntax-green border-syntax-green/50"
-                  />
-                  <TechTag
-                    tech="Dart"
-                    colorClass="text-syntax-blue border-syntax-blue/50"
-                  />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/40 to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <h3 className="mono text-syntax-green text-xl font-bold drop-shadow-lg">
+                    Arif FM
+                  </h3>
                 </div>
-                <div className="mono text-sm text-syntax-blue hover:text-syntax-green transition-colors">
+              </div>
+              <div className="p-5 flex-1 flex flex-col border-t border-[#21262d] border-l-4 border-l-syntax-green bg-[#0d1117]/50">
+                <p className="text-[#8b949e] text-sm mb-4 line-clamp-2 flex-1">
+                  Podcast and live audio streaming with creator episodes, community interaction, and listener tipping.
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  <TechTag tech="Flutter" colorClass="text-syntax-green border-syntax-green/50" />
+                  <TechTag tech="Dart" colorClass="text-syntax-blue border-syntax-blue/50" />
+                </div>
+                <div className="mono text-xs font-medium text-syntax-green group-hover:underline">
                   View Details →
                 </div>
               </div>
@@ -639,48 +616,39 @@ export default function Home() {
               tabIndex={0}
               onClick={() => setArtsPopupOpen(true)}
               onKeyDown={(e) => e.key === "Enter" && setArtsPopupOpen(true)}
-              className="group relative overflow-hidden rounded-xl border-2 border-[#21262d] bg-[#0d1117] hover:border-syntax-orange transition-all duration-300 glow-blue cursor-pointer"
+              className="group relative overflow-hidden rounded-xl border-2 border-[#21262d] bg-[#0d1117] hover:border-syntax-orange transition-all duration-300 glow-orange cursor-pointer flex flex-col"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-56 overflow-hidden shrink-0">
                 <Image
                   src="/assets/arts1.png"
                   alt="Arts Plus"
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent"></div>
-                <div className="absolute top-4 right-4">
-                  <div className="terminal-window px-3 py-1 mono text-xs text-syntax-green">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/40 to-transparent" />
+                <div className="absolute top-3 right-3">
+                  <span className="mono text-[10px] font-semibold px-2.5 py-1 rounded-md bg-syntax-orange/20 text-syntax-orange border border-syntax-orange/40">
                     Team Lead
-                  </div>
+                  </span>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <h3 className="mono text-syntax-orange text-xl font-bold drop-shadow-lg">
+                    Arts Plus
+                  </h3>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="mono text-syntax-orange text-2xl font-bold mb-2">
-                  Arts Plus
-                </h3>
-                <p className="text-[#8b949e] mb-4 line-clamp-2">
-                  Video streaming platform with web, mobile app, and admin
-                  dashboard. Integrated with Bunny CDN, Redis, and AWS S3.
+              <div className="p-5 flex-1 flex flex-col border-t border-[#21262d] border-l-4 border-l-syntax-orange bg-[#0d1117]/50">
+                <p className="text-[#8b949e] text-sm mb-4 line-clamp-2 flex-1">
+                  Subscription video streaming for arts and cultural content with Bunny CDN, Redis, and AWS S3.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <TechTag
-                    tech=".NET Core 8"
-                    colorClass="text-syntax-blue border-syntax-blue/50"
-                  />
-                  <span className="mono text-xs px-3 py-1 bg-[#21262d] text-syntax-purple border border-syntax-purple/50 rounded-full">
-                    Bunny CDN
-                  </span>
-                  <TechTag
-                    tech="Redis"
-                    colorClass="text-syntax-cyan border-syntax-cyan/50"
-                  />
-                  <span className="mono text-xs px-3 py-1 bg-[#21262d] text-syntax-green border border-syntax-green/50 rounded-full">
-                    AWS S3
-                  </span>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  <TechTag tech=".NET Core 8" colorClass="text-syntax-blue border-syntax-blue/50" />
+                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-purple border border-syntax-purple/50 rounded-full">Bunny CDN</span>
+                  <TechTag tech="Redis" colorClass="text-syntax-cyan border-syntax-cyan/50" />
+                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-green border border-syntax-green/50 rounded-full">AWS S3</span>
                 </div>
-                <div className="mono text-sm text-syntax-blue hover:text-syntax-orange transition-colors">
+                <div className="mono text-xs font-medium text-syntax-orange group-hover:underline">
                   View Details →
                 </div>
               </div>
@@ -728,49 +696,47 @@ export default function Home() {
                     07/2023 → Present
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-4 mt-6">
-                  <div className="space-y-2">
-                    <div className="mono text-syntax-blue text-sm font-semibold mb-2">
-                      Key Achievements:
-                    </div>
-                    <ul className="space-y-2 text-sm text-[#c9d1d9]">
-                      <li className="flex items-start gap-2">
-                        <span className="text-terminal-green mono mt-1">▸</span>
-                        <span>
-                          Led Terminal Management System development (Team Lead)
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-terminal-green mono mt-1">▸</span>
-                        <span>
-                          Built Arifpay Admin Dashboard backend with .NET Core 8
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-terminal-green mono mt-1">▸</span>
-                        <span>
-                          Developed Arif FM Flutter app for audio streaming
-                        </span>
-                      </li>
-                    </ul>
+                <div className="mt-6">
+                  <div className="mono text-syntax-green text-sm font-semibold mb-2">
+                    Key Achievements
                   </div>
-                  <div className="space-y-2">
-                    <div className="mono text-syntax-blue text-sm font-semibold mb-2">
-                      Technologies:
+                  <ul className="space-y-2 text-sm text-[#c9d1d9] mb-4">
+                    <li className="flex items-start gap-2">
+                      <span className="text-terminal-green mono mt-1">▸</span>
+                      <span>
+                        <span className="text-syntax-cyan font-medium">TMS:</span> Built and maintained the Terminal Management System for ArifPay POS—frontend (Vanilla JS, Handlebars), backend (NestJS, MySQL), and background jobs (Redis, BullMQ).
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-terminal-green mono mt-1">▸</span>
+                      <span>
+                        <span className="text-syntax-purple font-medium">Admin Dashboard:</span> Developed scalable .NET Core 8 and PostgreSQL backend and APIs for merchant and payment management; collaborated with the React.js frontend team.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-terminal-green mono mt-1">▸</span>
+                      <span>
+                        <span className="text-syntax-green font-medium">Arif FM:</span> Developed the Flutter mobile app for podcast and live audio streaming with subscriptions, community features, and listener tipping.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-terminal-green mono mt-1">▸</span>
+                      <span>
+                        <span className="text-syntax-orange font-medium">Arts Plus:</span> Led backend development for the subscription video streaming platform (.NET Core 8, Bunny CDN, Redis, AWS S3) and coordinated with frontend and mobile teams.
+                      </span>
+                    </li>
+                  </ul>
+                  <div className="pt-4 border-t border-[#21262d]">
+                    <div className="mono text-syntax-blue text-xs font-semibold mb-2">
+                      Technologies
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-cyan rounded">
-                        NestJS
-                      </span>
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-blue rounded">
-                        .NET Core
-                      </span>
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-green rounded">
-                        Flutter
-                      </span>
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-purple rounded">
-                        PostgreSQL
-                      </span>
+                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-cyan rounded">NestJS</span>
+                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-blue rounded">.NET Core</span>
+                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-green rounded">Flutter</span>
+                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-purple rounded">PostgreSQL</span>
+                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-cyan rounded">React.js</span>
+                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-orange rounded">Redis</span>
                     </div>
                   </div>
                 </div>
@@ -783,9 +749,14 @@ export default function Home() {
               <div className="ml-8 terminal-window border-l-4 border-syntax-blue">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
                   <div>
-                    <h3 className="mono text-syntax-blue text-2xl font-bold mb-2">
-                      Backend Software Developer
-                    </h3>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="mono text-syntax-blue text-2xl font-bold">
+                        Backend Software Developer
+                      </h3>
+                      <span className="mono text-xs px-2 py-1 bg-syntax-blue/20 text-syntax-blue rounded-full border border-syntax-blue/40">
+                        Internship
+                      </span>
+                    </div>
                     <div className="mono text-syntax-cyan text-lg mb-1">
                       Awra Delivery
                     </div>
@@ -797,21 +768,31 @@ export default function Home() {
                     05/2023 → 07/2023
                   </div>
                 </div>
-                <div className="space-y-2 text-sm text-[#c9d1d9]">
-                  <p className="mb-3">
-                    Software development intern contributing to e-commerce and
-                    chat applications.
-                  </p>
+                <p className="text-sm text-[#c9d1d9] mb-3">
+                  Backend development intern for e-commerce and real-time chat products.
+                </p>
+                <ul className="space-y-2 text-sm text-[#c9d1d9] mb-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-syntax-blue mono mt-1">▸</span>
+                    <span>Contributed to backend APIs and services for the e-commerce platform.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-syntax-blue mono mt-1">▸</span>
+                    <span>Worked on real-time chat features and integration with existing systems.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-syntax-blue mono mt-1">▸</span>
+                    <span>Collaborated with frontend and mobile teams on API contracts and delivery.</span>
+                  </li>
+                </ul>
+                <div className="pt-4 border-t border-[#21262d]">
+                  <div className="mono text-syntax-blue text-xs font-semibold mb-2">
+                    Technologies
+                  </div>
                   <div className="flex flex-wrap gap-2">
-                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-cyan rounded">
-                      NestJS
-                    </span>
-                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-green rounded">
-                      React
-                    </span>
-                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-blue rounded">
-                      Flutter
-                    </span>
+                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-cyan rounded">NestJS</span>
+                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-green rounded">React</span>
+                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-blue rounded">Flutter</span>
                   </div>
                 </div>
               </div>

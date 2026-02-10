@@ -71,6 +71,16 @@ body {
   transition: box-shadow 0.3s ease;
 }
 
+.glow-orange:hover {
+  box-shadow: 0 0 20px rgba(255, 123, 114, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-purple:hover {
+  box-shadow: 0 0 20px rgba(188, 140, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
