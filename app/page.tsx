@@ -10,6 +10,7 @@ import {
   SiDotnet,
   SiNodedotjs,
   SiReact,
+  SiNextdotjs,
   SiHandlebarsdotjs,
   SiMysql,
   SiMongodb,
@@ -36,6 +37,7 @@ const skillIcons: Record<
   NodeJS: SiNodedotjs,
   ReactJS: SiReact,
   "React.js": SiReact,
+  "Next.js": SiNextdotjs,
   Handlebars: SiHandlebarsdotjs,
   "Vanilla JS": SiJavascript,
   MySQL: SiMysql,
@@ -120,6 +122,212 @@ const DESCRIPTION_HIGHLIGHTS: [string, string][] = [
   ["real-time", "text-syntax-blue"],
   ["scalable", "text-syntax-cyan"],
 ];
+
+const EXPERIENCE = [
+  {
+    role: "Full Stack Software Developer",
+    company: "Arifpay Financial Technologies",
+    location: "Addis Ababa, Ethiopia",
+    period: "Jul 2023 — Present",
+    badge: {
+      label: "Current",
+      className: "bg-syntax-green/15 text-syntax-green border-syntax-green/30",
+    },
+    summary:
+      "Full-stack delivery across fintech, streaming, and media products — from APIs and dashboards to mobile apps.",
+    highlights: [
+      {
+        name: "TMS",
+        color: "text-syntax-cyan",
+        description:
+          "Terminal Management System for POS — NestJS backend, MySQL, Redis & BullMQ jobs, IoT frontend.",
+      },
+      {
+        name: "Admin Dashboard",
+        color: "text-syntax-purple",
+        description:
+          ".NET Core & PostgreSQL services for merchants, payments, and reporting; partnered with React team.",
+      },
+      {
+        name: "Arif FM",
+        color: "text-syntax-green",
+        description:
+          "Flutter app for podcast & live audio — subscriptions, community, and listener tipping.",
+      },
+      {
+        name: "Arts Plus",
+        color: "text-syntax-orange",
+        description:
+          "Led streaming backend (.NET, Bunny CDN, Redis, S3) and coordinated web & mobile delivery.",
+      },
+    ],
+    technologies: [
+      "NestJS",
+      ".NET Core",
+      "Flutter",
+      "PostgreSQL",
+      "React.js",
+      "Next.js",
+      "Redis",
+    ],
+  },
+  {
+    role: "Backend Software Developer",
+    company: "Awra Delivery",
+    location: "Addis Ababa, Ethiopia",
+    period: "May 2023 — Jul 2023",
+    badge: {
+      label: "Internship",
+      className: "bg-syntax-blue/15 text-syntax-blue border-syntax-blue/30",
+    },
+    summary:
+      "Backend intern on e-commerce and real-time chat — APIs, integrations, and cross-team delivery.",
+    bullets: [
+      "Built and extended REST APIs for the e-commerce platform.",
+      "Shipped real-time chat features wired into existing services.",
+      "Aligned API contracts with frontend and mobile teams.",
+    ],
+    technologies: ["NestJS", "React", "Flutter"],
+  },
+] as const;
+
+const SKILL_CATEGORIES = [
+  {
+    title: "Languages",
+    accent: "text-syntax-yellow",
+    skills: [
+      {
+        name: "C#",
+        color: "text-syntax-blue border-syntax-blue/40 hover:bg-syntax-blue/10",
+      },
+      {
+        name: "JavaScript",
+        color:
+          "text-syntax-yellow border-syntax-yellow/40 hover:bg-syntax-yellow/10",
+      },
+      {
+        name: "TypeScript",
+        color: "text-syntax-blue border-syntax-blue/40 hover:bg-syntax-blue/10",
+      },
+      {
+        name: "Dart",
+        color: "text-syntax-cyan border-syntax-cyan/40 hover:bg-syntax-cyan/10",
+      },
+    ],
+  },
+  {
+    title: "Frameworks & Libraries",
+    accent: "text-syntax-cyan",
+    skills: [
+      {
+        name: "NestJS",
+        color:
+          "text-syntax-orange border-syntax-orange/40 hover:bg-syntax-orange/10",
+      },
+      {
+        name: ".NET Core",
+        color:
+          "text-syntax-purple border-syntax-purple/40 hover:bg-syntax-purple/10",
+      },
+      {
+        name: "NodeJS",
+        color:
+          "text-syntax-green border-syntax-green/40 hover:bg-syntax-green/10",
+      },
+      {
+        name: "ReactJS",
+        color: "text-syntax-cyan border-syntax-cyan/40 hover:bg-syntax-cyan/10",
+      },
+      {
+        name: "Next.js",
+        color: "text-[#c9d1d9] border-[#484f58] hover:bg-white/5",
+      },
+      {
+        name: "Flutter",
+        color: "text-syntax-cyan border-syntax-cyan/40 hover:bg-syntax-cyan/10",
+      },
+      {
+        name: "Handlebars",
+        color:
+          "text-syntax-orange border-syntax-orange/40 hover:bg-syntax-orange/10",
+      },
+      {
+        name: "Vanilla JS",
+        color:
+          "text-syntax-yellow border-syntax-yellow/40 hover:bg-syntax-yellow/10",
+      },
+    ],
+  },
+  {
+    title: "Databases",
+    accent: "text-syntax-blue",
+    skills: [
+      {
+        name: "MySQL",
+        color: "text-syntax-blue border-syntax-blue/40 hover:bg-syntax-blue/10",
+      },
+      {
+        name: "PostgreSQL",
+        color: "text-syntax-blue border-syntax-blue/40 hover:bg-syntax-blue/10",
+      },
+      {
+        name: "MongoDB",
+        color:
+          "text-syntax-green border-syntax-green/40 hover:bg-syntax-green/10",
+      },
+      {
+        name: "MSSQL",
+        color: "text-syntax-blue border-syntax-blue/40 hover:bg-syntax-blue/10",
+      },
+    ],
+  },
+  {
+    title: "DevOps & Infrastructure",
+    accent: "text-syntax-green",
+    skills: [
+      {
+        name: "Docker",
+        color: "text-syntax-blue border-syntax-blue/40 hover:bg-syntax-blue/10",
+      },
+      {
+        name: "CI/CD",
+        color:
+          "text-syntax-purple border-syntax-purple/40 hover:bg-syntax-purple/10",
+      },
+      {
+        name: "Nginx",
+        color:
+          "text-syntax-green border-syntax-green/40 hover:bg-syntax-green/10",
+      },
+      {
+        name: "Redis",
+        color:
+          "text-syntax-orange border-syntax-orange/40 hover:bg-syntax-orange/10",
+      },
+    ],
+  },
+] as const;
+
+const ABOUT_DETAILS = {
+  tagline:
+    "3+ years shipping backends, dashboards, and mobile apps — with a focus on clear architecture and reliable delivery.",
+  education: [
+    {
+      degree: "B.Sc. Computer Science",
+      school: "HiLCoE School of Computer Science",
+      period: "Feb 2023",
+      highlight: true,
+    },
+    {
+      degree: "High School Diploma",
+      school: "One Planet International School",
+      period: "Jul 2018",
+      highlight: false,
+    },
+  ],
+  languages: ["English", "Amharic"],
+  certifications: ["Marketable software development 101 training"],
+} as const;
 
 function highlightDescription(text: string): ReactNode {
   const escaped = DESCRIPTION_HIGHLIGHTS.map(([p]) =>
@@ -234,9 +442,7 @@ export default function Home() {
   );
 
   const goToSlideTms = useCallback((index: number) => {
-    setTmsSlideIndex(
-      (i) => (index + TMS_IMAGES.length) % TMS_IMAGES.length,
-    );
+    setTmsSlideIndex((i) => (index + TMS_IMAGES.length) % TMS_IMAGES.length);
   }, []);
   const goPrevTms = useCallback(
     () => goToSlideTms(tmsSlideIndex - 1),
@@ -248,9 +454,7 @@ export default function Home() {
   );
 
   const goToSlideArts = useCallback((index: number) => {
-    setArtsSlideIndex(
-      (i) => (index + ARTS_IMAGES.length) % ARTS_IMAGES.length,
-    );
+    setArtsSlideIndex((i) => (index + ARTS_IMAGES.length) % ARTS_IMAGES.length);
   }, []);
   const goPrevArts = useCallback(
     () => goToSlideArts(artsSlideIndex - 1),
@@ -262,9 +466,7 @@ export default function Home() {
   );
 
   const goToSlideFm = useCallback((index: number) => {
-    setFmSlideIndex(
-      (i) => (index + FM_IMAGES.length) % FM_IMAGES.length,
-    );
+    setFmSlideIndex((i) => (index + FM_IMAGES.length) % FM_IMAGES.length);
   }, []);
   const goPrevFm = useCallback(
     () => goToSlideFm(fmSlideIndex - 1),
@@ -361,112 +563,209 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden">
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0d1117] via-[#161b22] to-[#0d1117]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(88,166,255,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(57,197,207,0.1),transparent_50%)]"></div>
+      <section className="relative flex items-center px-4 sm:px-6 lg:px-8 pt-24 pb-20 lg:pt-28 lg:pb-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1117] via-[#121820] to-[#0d1117]" />
+        <div className="hero-grid absolute inset-0" />
+        <div className="absolute top-0 right-0 w-[min(560px,70vw)] h-[min(560px,70vw)] translate-x-1/4 -translate-y-1/4 rounded-full bg-[#bc8cff]/20 blur-[100px]" />
+        <div className="absolute bottom-0 left-0 w-[min(480px,60vw)] h-[min(480px,60vw)] -translate-x-1/4 translate-y-1/4 rounded-full bg-[#58a6ff]/15 blur-[90px]" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#30363d] to-transparent" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Text */}
-            <div className="text-center lg:text-left space-y-8 animate-fade-in">
-              <div className="space-y-4">
-                <div className="mono text-syntax-green text-lg">
-                  Hi, my name is
-                </div>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-                  <span className="font-sans">Dagmawi Kindu</span>
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-14 xl:gap-20 items-center">
+            {/* Intro */}
+            <div className="order-2 lg:order-1 space-y-7 animate-fade-in text-center lg:text-left">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                <span className="inline-flex items-center gap-2 mono text-xs px-3 py-1.5 rounded-full border border-syntax-green/40 bg-syntax-green/10 text-syntax-green">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-syntax-green opacity-60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-syntax-green" />
+                  </span>
+                  Available for work
+                </span>
+                <span className="mono text-xs text-[#8b949e]">
+                  Full-Stack Developer · Ethiopia
+                </span>
+              </div>
+
+              <div className="space-y-3">
+                <p className="mono text-syntax-green text-base sm:text-lg">
+                  Hi, I&apos;m
+                </p>
+                <h1 className="text-[2.75rem] sm:text-6xl xl:text-[4.25rem] font-bold leading-[1.08] tracking-tight">
+                  <span className="font-sans bg-gradient-to-r from-white via-[#e6edf3] to-[#58a6ff] bg-clip-text text-transparent">
+                    Dagmawi Kindu
+                  </span>
                   <br />
                   <span className="mono text-syntax-cyan">Mekonnen</span>
                 </h1>
-                <div className="mono text-2xl sm:text-3xl text-syntax-blue">
-                  Full-Stack Developer
+                <p className="text-lg sm:text-xl text-[#8b949e] max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                  I build{" "}
+                  <span className="text-syntax-blue font-medium">
+                    production-grade
+                  </span>{" "}
+                  backends, dashboards, and mobile apps for fintech and media
+                  platforms.
+                </p>
+              </div>
+
+              <div className="terminal-window p-5 sm:p-6 text-left max-w-xl mx-auto lg:mx-0 border-[#30363d]/80 shadow-lg shadow-black/20">
+                <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#30363d]">
+                  <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
+                  <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
+                  <span className="w-3 h-3 rounded-full bg-[#28c840]" />
+                  <span className="mono text-xs text-[#8b949e] ml-2">
+                    developer.ts
+                  </span>
+                </div>
+                <div className="mono text-sm sm:text-base leading-relaxed space-y-1">
+                  <p>
+                    <span className="text-syntax-purple">const</span>{" "}
+                    <span className="text-syntax-blue">focus</span>{" "}
+                    <span className="text-[#8b949e]">=</span>{" "}
+                    <span className="text-syntax-green">
+                      &apos;scalable systems&apos;
+                    </span>
+                    <span className="text-[#8b949e]">;</span>
+                  </p>
+                  <p>
+                    <span className="text-syntax-purple">const</span>{" "}
+                    <span className="text-syntax-blue">stack</span>{" "}
+                    <span className="text-[#8b949e]">=</span>{" "}
+                    <span className="text-syntax-cyan">
+                      [&apos;.NET&apos;, &apos;NestJS&apos;,
+                      &apos;Next.js&apos;, &apos;Flutter&apos;]
+                    </span>
+                    <span className="text-[#8b949e]">;</span>
+                  </p>
                 </div>
               </div>
 
-              <p className="text-lg text-[#8b949e] leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Building scalable systems and architectures with modern
-                technologies. Passionate about problem-solving and delivering
-                high-performance solutions.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <a
                   href="#projects"
-                  className="px-8 py-3 bg-syntax-blue text-white rounded-lg mono font-semibold hover:bg-[#4493f8] transition-all glow-blue inline-block text-center"
+                  className="w-full sm:w-auto px-8 py-3.5 bg-syntax-blue text-white rounded-lg mono font-semibold hover:bg-[#4493f8] transition-all glow-blue text-center"
                 >
-                  View Projects
+                  See my work
                 </a>
                 <a
                   href="#contact"
-                  className="px-8 py-3 border-2 border-syntax-cyan text-syntax-cyan rounded-lg mono font-semibold hover:bg-syntax-cyan/10 transition-all inline-block text-center"
+                  className="w-full sm:w-auto px-8 py-3.5 border border-[#30363d] text-[#c9d1d9] rounded-lg mono font-semibold hover:border-syntax-cyan hover:text-syntax-cyan transition-all text-center bg-[#161b22]/60"
                 >
-                  Get In Touch
+                  Get in touch
                 </a>
+                <div className="flex items-center gap-2 sm:ml-1">
+                  <a
+                    href="mailto:dagim16Kindu@gmail.com"
+                    className="p-3 rounded-lg border border-[#30363d] text-[#8b949e] hover:text-syntax-cyan hover:border-syntax-cyan/50 transition-all"
+                    aria-label="Email"
+                  >
+                    <span className="mono text-lg">✉</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/dag-kin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-lg border border-[#30363d] text-[#8b949e] hover:text-syntax-blue hover:border-syntax-blue/50 transition-all"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
 
-              {/* Quick stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-[#21262d]">
-                <div className="text-center lg:text-left">
-                  <div className="mono text-3xl font-bold text-syntax-green">
-                    3+
+              <div className="grid sm:grid-cols-3 gap-3 pt-2">
+                {[
+                  {
+                    title: "Fintech & APIs",
+                    desc: "Payments, admin dashboards, secure backends",
+                    border: "border-syntax-purple",
+                    text: "text-syntax-purple",
+                  },
+                  {
+                    title: "Streaming",
+                    desc: "Live audio, video platforms, subscriptions",
+                    border: "border-syntax-cyan",
+                    text: "text-syntax-cyan",
+                  },
+                  {
+                    title: "Mobile",
+                    desc: "Flutter apps with polished UX",
+                    border: "border-syntax-green",
+                    text: "text-syntax-green",
+                  },
+                ].map(({ title, desc, border, text }) => (
+                  <div
+                    key={title}
+                    className={`terminal-window p-4 border-t-2 ${border} hover:bg-[#1c2128] transition-colors text-left`}
+                  >
+                    <div
+                      className={`mono text-sm font-semibold mb-1.5 ${text}`}
+                    >
+                      {title}
+                    </div>
+                    <p className="text-xs text-[#8b949e] leading-relaxed">
+                      {desc}
+                    </p>
                   </div>
-                  <div className="text-sm text-[#8b949e]">Years Experience</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="mono text-3xl font-bold text-syntax-purple">
-                    10+
-                  </div>
-                  <div className="text-sm text-[#8b949e]">Projects</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="mono text-3xl font-bold text-syntax-cyan">
-                    Full
-                  </div>
-                  <div className="text-sm text-[#8b949e]">Stack</div>
-                </div>
+                ))}
               </div>
             </div>
 
-            {/* Right side - Profile Image */}
-            <div className="relative flex justify-center lg:justify-end animate-slide-up">
-              <div className="relative">
-                <div className="absolute inset-0 bg-syntax-cyan rounded-2xl blur-3xl opacity-20 animate-pulse"></div>
-                <div className="relative rounded-2xl border-2 border-syntax-cyan p-2 glow-cyan">
-                  <Image
-                    src="/profile-placeholder.svg"
-                    alt="Dagmawi Kindu Mekonnen"
-                    width={400}
-                    height={400}
-                    className="rounded-xl"
-                    priority
-                  />
-                </div>
-                {/* Floating code snippets */}
-                <div className="absolute -top-4 -left-4 terminal-window p-3 mono text-xs hidden lg:block">
-                  <div className="text-syntax-yellow">const</div>
-                  <div className="text-syntax-blue">developer</div>
-                  <div className="text-syntax-purple">=</div>
-                  <div className="text-syntax-green">
-                    &apos;Full-Stack&apos;
+            {/* Portrait */}
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-slide-up">
+              <div className="relative hero-float">
+                <div className="absolute -inset-6 sm:-inset-8 rounded-[2rem] bg-gradient-to-br from-[#bc8cff]/35 via-[#58a6ff]/10 to-transparent blur-2xl" />
+                <div className="relative w-[min(100%,440px)] sm:w-[500px]">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-2xl shadow-[#bc8cff]/10 bg-gradient-to-b from-[#2a2438] via-[#1a1525] to-[#161b22]">
+                    <Image
+                      src="/profile-pic.png"
+                      alt="Dagmawi Kindu Mekonnen"
+                      fill
+                      className="object-cover object-[center_18%] scale-[1.02]"
+                      sizes="(max-width: 640px) 440px, 500px"
+                      priority
+                    />
                   </div>
-                </div>
-                <div className="absolute -bottom-4 -right-4 terminal-window p-3 mono text-xs hidden lg:block">
-                  <div className="text-syntax-blue">function</div>
-                  <div className="text-syntax-cyan">build()</div>
-                  <div className="text-syntax-purple">{`{`}</div>
-                  <div className="text-syntax-green pl-2">return awesome;</div>
-                  <div className="text-syntax-purple">{`}`}</div>
+
+                  <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 sm:-left-8 w-[calc(100%-1rem)] sm:w-56 terminal-window px-4 py-3 shadow-xl border-syntax-cyan/30">
+                    <div className="mono text-[10px] uppercase tracking-wider text-syntax-yellow mb-1">
+                      Approach
+                    </div>
+                    <div className="mono text-sm text-[#c9d1d9]">
+                      <span className="text-syntax-cyan">Design</span>
+                      <span className="text-[#8b949e]"> → </span>
+                      <span className="text-syntax-blue">Build</span>
+                      <span className="text-[#8b949e]"> → </span>
+                      <span className="text-syntax-green">Ship</span>
+                    </div>
+                  </div>
+
+                  <div className="absolute -top-3 -right-3 sm:-right-6 hidden sm:block terminal-window px-3 py-2 shadow-lg">
+                    <div className="mono text-xs text-syntax-green font-semibold">
+                      3+ yrs
+                    </div>
+                    <div className="mono text-[10px] text-[#8b949e]">
+                      production software
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="mono text-syntax-blue text-sm">↓ scroll</div>
+          <div className="flex justify-center mt-14 lg:mt-16">
+            <a
+              href="#projects"
+              className="group flex flex-col items-center gap-2 text-[#8b949e] hover:text-syntax-cyan transition-colors"
+            >
+              <span className="mono text-xs tracking-widest uppercase">
+                Explore
+              </span>
+              <span className="text-syntax-cyan group-hover:translate-y-1 transition-transform">
+                ↓
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -521,13 +820,25 @@ export default function Home() {
               </div>
               <div className="p-5 flex-1 flex flex-col border-t border-[#21262d] border-l-4 border-l-syntax-cyan bg-[#0d1117]/50">
                 <p className="text-[#8b949e] text-sm mb-4 line-clamp-2 flex-1">
-                  IoT-based terminal management with remote POS control, transaction management, and device monitoring.
+                  IoT-based terminal management with remote POS control,
+                  transaction management, and device monitoring.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-3">
-                  <TechTag tech="NestJS" colorClass="text-syntax-cyan border-syntax-cyan/50" />
-                  <TechTag tech="MySQL" colorClass="text-syntax-green border-syntax-green/50" />
-                  <TechTag tech="Redis" colorClass="text-syntax-purple border-syntax-purple/50" />
-                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-orange border border-syntax-orange/50 rounded-full">BullMQ</span>
+                  <TechTag
+                    tech="NestJS"
+                    colorClass="text-syntax-cyan border-syntax-cyan/50"
+                  />
+                  <TechTag
+                    tech="MySQL"
+                    colorClass="text-syntax-green border-syntax-green/50"
+                  />
+                  <TechTag
+                    tech="Redis"
+                    colorClass="text-syntax-purple border-syntax-purple/50"
+                  />
+                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-orange border border-syntax-orange/50 rounded-full">
+                    BullMQ
+                  </span>
                 </div>
                 <div className="mono text-xs font-medium text-syntax-cyan group-hover:underline">
                   View Details →
@@ -560,12 +871,22 @@ export default function Home() {
               </div>
               <div className="p-5 flex-1 flex flex-col border-t border-[#21262d] border-l-4 border-l-syntax-purple bg-[#0d1117]/50">
                 <p className="text-[#8b949e] text-sm mb-4 line-clamp-2 flex-1">
-                  Unified management platform for accounts, products, and payment activities with real-time monitoring and reporting.
+                  Unified management platform for accounts, products, and
+                  payment activities with real-time monitoring and reporting.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-3">
-                  <TechTag tech=".NET Core 8" colorClass="text-syntax-blue border-syntax-blue/50" />
-                  <TechTag tech="PostgreSQL" colorClass="text-syntax-green border-syntax-green/50" />
-                  <TechTag tech="React.js" colorClass="text-syntax-cyan border-syntax-cyan/50" />
+                  <TechTag
+                    tech=".NET Core 8"
+                    colorClass="text-syntax-blue border-syntax-blue/50"
+                  />
+                  <TechTag
+                    tech="PostgreSQL"
+                    colorClass="text-syntax-green border-syntax-green/50"
+                  />
+                  <TechTag
+                    tech="React.js"
+                    colorClass="text-syntax-cyan border-syntax-cyan/50"
+                  />
                 </div>
                 <div className="mono text-xs font-medium text-syntax-purple group-hover:underline">
                   View Details →
@@ -598,11 +919,18 @@ export default function Home() {
               </div>
               <div className="p-5 flex-1 flex flex-col border-t border-[#21262d] border-l-4 border-l-syntax-green bg-[#0d1117]/50">
                 <p className="text-[#8b949e] text-sm mb-4 line-clamp-2 flex-1">
-                  Podcast and live audio streaming with creator episodes, community interaction, and listener tipping.
+                  Podcast and live audio streaming with creator episodes,
+                  community interaction, and listener tipping.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-3">
-                  <TechTag tech="Flutter" colorClass="text-syntax-green border-syntax-green/50" />
-                  <TechTag tech="Dart" colorClass="text-syntax-blue border-syntax-blue/50" />
+                  <TechTag
+                    tech="Flutter"
+                    colorClass="text-syntax-green border-syntax-green/50"
+                  />
+                  <TechTag
+                    tech="Dart"
+                    colorClass="text-syntax-blue border-syntax-blue/50"
+                  />
                 </div>
                 <div className="mono text-xs font-medium text-syntax-green group-hover:underline">
                   View Details →
@@ -640,13 +968,24 @@ export default function Home() {
               </div>
               <div className="p-5 flex-1 flex flex-col border-t border-[#21262d] border-l-4 border-l-syntax-orange bg-[#0d1117]/50">
                 <p className="text-[#8b949e] text-sm mb-4 line-clamp-2 flex-1">
-                  Subscription video streaming for arts and cultural content with Bunny CDN, Redis, and AWS S3.
+                  Subscription video streaming for arts and cultural content
+                  with Bunny CDN, Redis, and AWS S3.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-3">
-                  <TechTag tech=".NET Core 8" colorClass="text-syntax-blue border-syntax-blue/50" />
-                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-purple border border-syntax-purple/50 rounded-full">Bunny CDN</span>
-                  <TechTag tech="Redis" colorClass="text-syntax-cyan border-syntax-cyan/50" />
-                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-green border border-syntax-green/50 rounded-full">AWS S3</span>
+                  <TechTag
+                    tech=".NET Core 8"
+                    colorClass="text-syntax-blue border-syntax-blue/50"
+                  />
+                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-purple border border-syntax-purple/50 rounded-full">
+                    Bunny CDN
+                  </span>
+                  <TechTag
+                    tech="Redis"
+                    colorClass="text-syntax-cyan border-syntax-cyan/50"
+                  />
+                  <span className="mono text-xs px-2.5 py-1 bg-[#21262d] text-syntax-green border border-syntax-green/50 rounded-full">
+                    AWS S3
+                  </span>
                 </div>
                 <div className="mono text-xs font-medium text-syntax-orange group-hover:underline">
                   View Details →
@@ -659,7 +998,7 @@ export default function Home() {
 
       {/* Experience Section */}
       <section id="experience" className="py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <div className="mono text-syntax-yellow text-sm mb-4">
               {"// Work Experience"}
@@ -670,140 +1009,101 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="space-y-8">
-            {/* Current Position */}
-            <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-syntax-green to-syntax-cyan"></div>
-              <div className="ml-8 terminal-window border-l-4 border-syntax-green">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="mono text-syntax-green text-2xl font-bold">
-                        Full Stack Software Developer
-                      </h3>
-                      <span className="mono text-xs px-2 py-1 bg-syntax-green/20 text-syntax-green rounded-full">
-                        Current
-                      </span>
-                    </div>
-                    <div className="mono text-syntax-cyan text-lg mb-1">
-                      Arifpay Financial Technologies
-                    </div>
-                    <div className="mono text-syntax-yellow text-sm">
-                      Addis Ababa, Ethiopia
-                    </div>
-                  </div>
-                  <div className="mono text-syntax-cyan text-sm mt-2 sm:mt-0">
-                    07/2023 → Present
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <div className="mono text-syntax-green text-sm font-semibold mb-2">
-                    Key Achievements
-                  </div>
-                  <ul className="space-y-2 text-sm text-[#c9d1d9] mb-4">
-                    <li className="flex items-start gap-2">
-                      <span className="text-terminal-green mono mt-1">▸</span>
-                      <span>
-                        <span className="text-syntax-cyan font-medium">TMS:</span> Built and maintained the Terminal Management System for ArifPay POS—frontend (Vanilla JS, Handlebars), backend (NestJS, MySQL), and background jobs (Redis, BullMQ).
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-terminal-green mono mt-1">▸</span>
-                      <span>
-                        <span className="text-syntax-purple font-medium">Admin Dashboard:</span> Developed scalable .NET Core 8 and PostgreSQL backend and APIs for merchant and payment management; collaborated with the React.js frontend team.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-terminal-green mono mt-1">▸</span>
-                      <span>
-                        <span className="text-syntax-green font-medium">Arif FM:</span> Developed the Flutter mobile app for podcast and live audio streaming with subscriptions, community features, and listener tipping.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-terminal-green mono mt-1">▸</span>
-                      <span>
-                        <span className="text-syntax-orange font-medium">Arts Plus:</span> Led backend development for the subscription video streaming platform (.NET Core 8, Bunny CDN, Redis, AWS S3) and coordinated with frontend and mobile teams.
-                      </span>
-                    </li>
-                  </ul>
-                  <div className="pt-4 border-t border-[#21262d]">
-                    <div className="mono text-syntax-blue text-xs font-semibold mb-2">
-                      Technologies
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-cyan rounded">NestJS</span>
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-blue rounded">.NET Core</span>
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-green rounded">Flutter</span>
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-purple rounded">PostgreSQL</span>
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-cyan rounded">React.js</span>
-                      <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-orange rounded">Redis</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative space-y-10 before:absolute before:left-[11px] before:top-3 before:bottom-3 before:w-px before:bg-[#30363d]">
+            {EXPERIENCE.map((job, index) => (
+              <article key={job.company} className="relative pl-10 sm:pl-12">
+                <span
+                  className={`absolute left-0 top-6 z-10 h-[22px] w-[22px] rounded-full border-2 bg-[#0d1117] ${
+                    index === 0
+                      ? "border-syntax-green shadow-[0_0_12px_rgba(63,185,80,0.35)]"
+                      : "border-syntax-blue"
+                  }`}
+                />
 
-            {/* Previous Position */}
-            <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-syntax-blue/50"></div>
-              <div className="ml-8 terminal-window border-l-4 border-syntax-blue">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="mono text-syntax-blue text-2xl font-bold">
-                        Backend Software Developer
-                      </h3>
-                      <span className="mono text-xs px-2 py-1 bg-syntax-blue/20 text-syntax-blue rounded-full border border-syntax-blue/40">
-                        Internship
+                <div className="terminal-window p-6 sm:p-8 space-y-5">
+                  <header className="space-y-3 pb-5 border-b border-[#21262d]">
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                      <span
+                        className={`mono text-[11px] px-2.5 py-1 rounded-full border ${job.badge.className}`}
+                      >
+                        {job.badge.label}
+                      </span>
+                      <span className="mono text-xs text-[#8b949e]">
+                        {job.period}
                       </span>
                     </div>
-                    <div className="mono text-syntax-cyan text-lg mb-1">
-                      Awra Delivery
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-[#e6edf3] mb-1">
+                        {job.role}
+                      </h3>
+                      <p className="mono text-syntax-cyan text-base sm:text-lg">
+                        {job.company}
+                      </p>
+                      <p className="mono text-xs text-[#8b949e] mt-1.5">
+                        {job.location}
+                      </p>
                     </div>
-                    <div className="mono text-syntax-yellow text-sm">
-                      Addis Ababa, Ethiopia
+                    <p className="text-sm text-[#8b949e] leading-relaxed">
+                      {job.summary}
+                    </p>
+                  </header>
+
+                  {"highlights" in job && job.highlights && (
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {job.highlights.map((item) => (
+                        <div
+                          key={item.name}
+                          className="rounded-lg border border-[#30363d]/80 bg-[#0d1117]/60 p-4 hover:border-[#484f58] transition-colors"
+                        >
+                          <div
+                            className={`mono text-sm font-semibold ${item.color}`}
+                          >
+                            {item.name}
+                          </div>
+                          <p className="text-xs text-[#8b949e] mt-2 leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
                     </div>
-                  </div>
-                  <div className="mono text-syntax-cyan text-sm mt-2 sm:mt-0">
-                    05/2023 → 07/2023
+                  )}
+
+                  {"bullets" in job && job.bullets && (
+                    <ul className="space-y-2.5">
+                      {job.bullets.map((bullet) => (
+                        <li
+                          key={bullet}
+                          className="flex gap-3 text-sm text-[#c9d1d9] leading-relaxed"
+                        >
+                          <span className="text-syntax-blue mono shrink-0 mt-0.5">
+                            ›
+                          </span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {job.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="mono text-[11px] px-2.5 py-1 rounded-md border border-[#30363d] bg-[#21262d]/80 text-[#8b949e] hover:text-syntax-cyan hover:border-syntax-cyan/40 transition-colors"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
-                <p className="text-sm text-[#c9d1d9] mb-3">
-                  Backend development intern for e-commerce and real-time chat products.
-                </p>
-                <ul className="space-y-2 text-sm text-[#c9d1d9] mb-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-syntax-blue mono mt-1">▸</span>
-                    <span>Contributed to backend APIs and services for the e-commerce platform.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-syntax-blue mono mt-1">▸</span>
-                    <span>Worked on real-time chat features and integration with existing systems.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-syntax-blue mono mt-1">▸</span>
-                    <span>Collaborated with frontend and mobile teams on API contracts and delivery.</span>
-                  </li>
-                </ul>
-                <div className="pt-4 border-t border-[#21262d]">
-                  <div className="mono text-syntax-blue text-xs font-semibold mb-2">
-                    Technologies
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-cyan rounded">NestJS</span>
-                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-green rounded">React</span>
-                    <span className="mono text-xs px-2 py-1 bg-[#21262d] text-syntax-blue rounded">Flutter</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-32 px-4 sm:px-6 lg:px-8 bg-[#161b22]">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <div className="mono text-syntax-yellow text-sm mb-4">
               {"// Technical Skills"}
@@ -814,234 +1114,94 @@ export default function Home() {
             </h2>
           </div>
 
-          {/* All skills in a unified grid */}
-          <div className="terminal-window p-8">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-              {[
-                {
-                  name: "C#",
-                  color:
-                    "text-syntax-blue border-syntax-blue/50 hover:bg-syntax-blue/10",
-                },
-                {
-                  name: "JavaScript",
-                  color:
-                    "text-syntax-yellow border-syntax-yellow/50 hover:bg-syntax-yellow/10",
-                },
-                {
-                  name: "TypeScript",
-                  color:
-                    "text-syntax-blue border-syntax-blue/50 hover:bg-syntax-blue/10",
-                },
-                {
-                  name: "Dart",
-                  color:
-                    "text-syntax-cyan border-syntax-cyan/50 hover:bg-syntax-cyan/10",
-                },
-                {
-                  name: "NestJS",
-                  color:
-                    "text-syntax-orange border-syntax-orange/50 hover:bg-syntax-orange/10",
-                },
-                {
-                  name: ".NET Core",
-                  color:
-                    "text-syntax-purple border-syntax-purple/50 hover:bg-syntax-purple/10",
-                },
-                {
-                  name: "NodeJS",
-                  color:
-                    "text-syntax-green border-syntax-green/50 hover:bg-syntax-green/10",
-                },
-                {
-                  name: "ReactJS",
-                  color:
-                    "text-syntax-cyan border-syntax-cyan/50 hover:bg-syntax-cyan/10",
-                },
-                {
-                  name: "Handlebars",
-                  color:
-                    "text-syntax-orange border-syntax-orange/50 hover:bg-syntax-orange/10",
-                },
-                {
-                  name: "Vanilla JS",
-                  color:
-                    "text-syntax-yellow border-syntax-yellow/50 hover:bg-syntax-yellow/10",
-                },
-                {
-                  name: "MySQL",
-                  color:
-                    "text-syntax-blue border-syntax-blue/50 hover:bg-syntax-blue/10",
-                },
-                {
-                  name: "PostgreSQL",
-                  color:
-                    "text-syntax-blue border-syntax-blue/50 hover:bg-syntax-blue/10",
-                },
-                {
-                  name: "MongoDB",
-                  color:
-                    "text-syntax-green border-syntax-green/50 hover:bg-syntax-green/10",
-                },
-                {
-                  name: "MSSQL",
-                  color:
-                    "text-syntax-blue border-syntax-blue/50 hover:bg-syntax-blue/10",
-                },
-                {
-                  name: "Flutter",
-                  color:
-                    "text-syntax-cyan border-syntax-cyan/50 hover:bg-syntax-cyan/10",
-                },
-                {
-                  name: "Docker",
-                  color:
-                    "text-syntax-blue border-syntax-blue/50 hover:bg-syntax-blue/10",
-                },
-                {
-                  name: "CI/CD",
-                  color:
-                    "text-syntax-purple border-syntax-purple/50 hover:bg-syntax-purple/10",
-                },
-                {
-                  name: "Nginx",
-                  color:
-                    "text-syntax-green border-syntax-green/50 hover:bg-syntax-green/10",
-                },
-                {
-                  name: "Redis",
-                  color:
-                    "text-syntax-orange border-syntax-orange/50 hover:bg-syntax-orange/10",
-                },
-              ].map(({ name, color }) => {
-                const Icon = skillIcons[name];
-                return (
-                  <div
-                    key={name}
-                    className={`mono text-sm px-4 py-3 bg-[#21262d] border rounded-lg transition-all cursor-pointer flex items-center justify-center gap-2 hover:scale-105 glow-cyan ${color}`}
-                  >
-                    {Icon && <Icon className="w-5 h-5 flex-shrink-0" />}
-                    <span className="text-center">{name}</span>
-                  </div>
-                );
-              })}
-            </div>
+          <div className="space-y-6">
+            {SKILL_CATEGORIES.map((category) => (
+              <div key={category.title} className="terminal-window p-5 sm:p-6">
+                <h3
+                  className={`mono text-sm font-semibold mb-4 ${category.accent}`}
+                >
+                  {category.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map(({ name, color }) => {
+                    const Icon = skillIcons[name];
+                    return (
+                      <span
+                        key={name}
+                        className={`mono text-xs sm:text-sm inline-flex items-center gap-2 px-3 py-2 rounded-lg border bg-[#0d1117]/50 transition-colors ${color}`}
+                      >
+                        {Icon && <Icon className="w-4 h-4 shrink-0" />}
+                        {name}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* About Section */}
       <section id="about" className="py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
             <div className="mono text-syntax-yellow text-sm mb-4">
               {"// About Me"}
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-5">
               <span className="font-sans">A Bit</span>
               <span className="mono text-syntax-cyan"> About Me</span>
             </h2>
+            <p className="text-[#8b949e] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+              {ABOUT_DETAILS.tagline}
+            </p>
           </div>
 
-          {/* About Text */}
-          <div className="mb-12 max-w-4xl mx-auto">
-            <div className="code-block p-8 space-y-6">
-              <div className="mono text-syntax-yellow text-sm mb-6 opacity-70">
-                {"// Professional Summary"}
+          <div className="terminal-window overflow-hidden">
+            <div className="grid md:grid-cols-3 md:divide-x divide-[#21262d]">
+              <div className="p-6 sm:p-7 md:col-span-2 border-b md:border-b-0 border-[#21262d]">
+                <h3 className="mono text-xs uppercase tracking-wider text-syntax-cyan mb-4">
+                  Education
+                </h3>
+                <ul className="space-y-4">
+                  {ABOUT_DETAILS.education.map((item) => (
+                    <li
+                      key={item.degree}
+                      className="flex justify-between gap-4 items-baseline"
+                    >
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-[#e6edf3]">
+                          {item.degree}
+                        </p>
+                        <p className="mono text-xs text-[#8b949e] mt-0.5 truncate">
+                          {item.school}
+                        </p>
+                      </div>
+                      <span className="mono text-[11px] text-[#8b949e] shrink-0">
+                        {item.period}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="space-y-5">
-                <p className="text-xl leading-relaxed text-[#c9d1d9] font-sans">
-                  I&apos;m a{" "}
-                  <span className="text-syntax-blue font-bold">
-                    full-stack software developer
-                  </span>{" "}
-                  with{" "}
-                  <span className="text-syntax-green font-bold">3+ years</span>{" "}
-                  of experience building scalable systems and architectures.
-                </p>
-                <p className="text-lg leading-relaxed text-[#b1bac4] font-sans">
-                  I focus on{" "}
-                  <span className="text-syntax-cyan">problem solving</span>,
-                  designing{" "}
-                  <span className="text-syntax-purple">
-                    robust applications
-                  </span>
-                  , and delivering{" "}
-                  <span className="text-syntax-green">
-                    reliable, high-performance solutions
-                  </span>{" "}
-                  using modern technologies, while adapting quickly to any work
-                  or responsibilities assigned.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          {/* Education, Languages & Certifications */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Education */}
-            <div className="terminal-window p-6">
-              <div className="mono text-syntax-cyan text-lg font-semibold mb-4 flex items-center gap-2">
-                <span>🎓</span>
-                <span>Education</span>
-              </div>
-              <div className="space-y-4">
-                <div className="border-l-2 border-syntax-green pl-4">
-                  <div className="mono text-syntax-green text-sm font-semibold mb-1">
-                    Bachelor of Science
-                  </div>
-                  <div className="mono text-xs text-[#8b949e] mb-1">
-                    Computer Science
-                  </div>
-                  <div className="mono text-xs text-syntax-yellow">
-                    HiLCoE School of Computer Science
-                  </div>
-                  <div className="mono text-xs text-syntax-purple mt-1">
-                    02/2023
-                  </div>
+              <div className="p-6 sm:p-7 space-y-6">
+                <div>
+                  <h3 className="mono text-xs uppercase tracking-wider text-syntax-purple mb-3">
+                    Languages
+                  </h3>
+                  <p className="text-sm text-[#c9d1d9]">
+                    {ABOUT_DETAILS.languages.join(" · ")}
+                  </p>
                 </div>
-                <div className="border-l-2 border-syntax-blue pl-4">
-                  <div className="mono text-syntax-blue text-sm font-semibold mb-1">
-                    High School Diploma
-                  </div>
-                  <div className="mono text-xs text-[#8b949e] mb-1">
-                    One Planet International School
-                  </div>
-                  <div className="mono text-xs text-syntax-purple">07/2018</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Languages */}
-            <div className="terminal-window p-6">
-              <div className="mono text-syntax-purple text-lg font-semibold mb-4 flex items-center gap-2">
-                <span>🌐</span>
-                <span>Languages</span>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-syntax-green"></div>
-                  <span className="mono text-sm text-[#c9d1d9]">English</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-syntax-cyan"></div>
-                  <span className="mono text-sm text-[#c9d1d9]">Amharic</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Certifications */}
-            <div className="terminal-window p-6">
-              <div className="mono text-syntax-orange text-lg font-semibold mb-4 flex items-center gap-2">
-                <span>🏆</span>
-                <span>Certifications</span>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <span className="text-terminal-green mono mt-0.5">▸</span>
-                  <span className="mono text-sm text-[#c9d1d9]">
-                    Marketable software development 101 training
-                  </span>
+                <div>
+                  <h3 className="mono text-xs uppercase tracking-wider text-syntax-orange mb-3">
+                    Certification
+                  </h3>
+                  <p className="text-sm text-[#8b949e] leading-relaxed">
+                    {ABOUT_DETAILS.certifications[0]}
+                  </p>
                 </div>
               </div>
             </div>
@@ -1458,27 +1618,8 @@ export default function Home() {
       )}
 
       {/* Footer */}
-      <footer className="py-16 px-4 border-t border-[#21262d] bg-[#0d1117]">
+      <footer className="py-12 px-4 border-t border-[#21262d] bg-[#0d1117]">
         <div className="max-w-4xl mx-auto">
-          <div className="terminal-window p-6 mb-6">
-            <div className="mono text-xs text-syntax-yellow mb-2">
-              {"// Programming Joke of the Day"}
-            </div>
-            <div className="mono text-sm text-[#c9d1d9]">
-              <span className="text-syntax-blue">const</span> joke ={" "}
-              <span className="text-syntax-green">
-                &apos;Why do programmers prefer dark mode?&apos;
-              </span>
-              ;<br />
-              <span className="text-syntax-blue">console</span>.
-              <span className="text-syntax-cyan">log</span>(
-              <span className="text-syntax-green">
-                &apos;Because light attracts bugs! 🐛&apos;
-              </span>
-              );
-            </div>
-          </div>
-
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="mono text-xs text-[#8b949e]">
               <span className="text-syntax-blue">$</span>{" "}
