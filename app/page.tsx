@@ -22,6 +22,8 @@ import {
 } from "react-icons/si";
 import { FaDatabase, FaLinkedin } from "react-icons/fa";
 
+const RESUME_URL = "/Dagmawi-Kindu-Resume.pdf";
+
 // Icon mapping for skills
 const skillIcons: Record<
   string,
@@ -428,7 +430,7 @@ export default function Home() {
 
   const goToSlide = useCallback((index: number) => {
     setAdminSlideIndex(
-      (i) => (index + ADMIN_IMAGES.length) % ADMIN_IMAGES.length,
+      () => (index + ADMIN_IMAGES.length) % ADMIN_IMAGES.length,
     );
   }, []);
 
@@ -442,7 +444,7 @@ export default function Home() {
   );
 
   const goToSlideTms = useCallback((index: number) => {
-    setTmsSlideIndex((i) => (index + TMS_IMAGES.length) % TMS_IMAGES.length);
+    setTmsSlideIndex(() => (index + TMS_IMAGES.length) % TMS_IMAGES.length);
   }, []);
   const goPrevTms = useCallback(
     () => goToSlideTms(tmsSlideIndex - 1),
@@ -454,7 +456,7 @@ export default function Home() {
   );
 
   const goToSlideArts = useCallback((index: number) => {
-    setArtsSlideIndex((i) => (index + ARTS_IMAGES.length) % ARTS_IMAGES.length);
+    setArtsSlideIndex(() => (index + ARTS_IMAGES.length) % ARTS_IMAGES.length);
   }, []);
   const goPrevArts = useCallback(
     () => goToSlideArts(artsSlideIndex - 1),
@@ -466,7 +468,7 @@ export default function Home() {
   );
 
   const goToSlideFm = useCallback((index: number) => {
-    setFmSlideIndex((i) => (index + FM_IMAGES.length) % FM_IMAGES.length);
+    setFmSlideIndex(() => (index + FM_IMAGES.length) % FM_IMAGES.length);
   }, []);
   const goPrevFm = useCallback(
     () => goToSlideFm(fmSlideIndex - 1),
@@ -552,10 +554,27 @@ export default function Home() {
                 Skills
               </a>
               <a
+                href="#resume"
+                className="mono text-sm text-[#8b949e] hover:text-syntax-cyan transition-colors"
+              >
+                Resume
+              </a>
+              <a
                 href="#contact"
                 className="mono text-sm text-[#8b949e] hover:text-syntax-cyan transition-colors"
               >
                 Contact
+              </a>
+              <a
+                href={RESUME_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mono text-xs font-semibold px-3 py-2 rounded-lg border border-syntax-cyan/40 bg-syntax-cyan/10 text-syntax-cyan hover:bg-syntax-cyan/15 hover:border-syntax-cyan/60 transition-colors"
+              >
+                <span aria-hidden className="text-base leading-none">
+                  ⤓
+                </span>
+                Download
               </a>
             </div>
           </div>
@@ -640,36 +659,72 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                <a
-                  href="#projects"
-                  className="w-full sm:w-auto px-8 py-3.5 bg-syntax-blue text-white rounded-lg mono font-semibold hover:bg-[#4493f8] transition-all glow-blue text-center"
-                >
-                  See my work
-                </a>
-                <a
-                  href="#contact"
-                  className="w-full sm:w-auto px-8 py-3.5 border border-[#30363d] text-[#c9d1d9] rounded-lg mono font-semibold hover:border-syntax-cyan hover:text-syntax-cyan transition-all text-center bg-[#161b22]/60"
-                >
-                  Get in touch
-                </a>
-                <div className="flex items-center gap-2 sm:ml-1">
-                  <a
-                    href="mailto:dagim16Kindu@gmail.com"
-                    className="p-3 rounded-lg border border-[#30363d] text-[#8b949e] hover:text-syntax-cyan hover:border-syntax-cyan/50 transition-all"
-                    aria-label="Email"
-                  >
-                    <span className="mono text-lg">✉</span>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/dag-kin"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-lg border border-[#30363d] text-[#8b949e] hover:text-syntax-blue hover:border-syntax-blue/50 transition-all"
-                    aria-label="LinkedIn"
-                  >
-                    <FaLinkedin className="w-5 h-5" />
-                  </a>
+              <div className="max-w-xl mx-auto lg:mx-0">
+                <div className="rounded-2xl border border-[#21262d] bg-[#0d1117]/35 backdrop-blur-sm p-3 sm:p-3.5 shadow-lg shadow-black/20">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <a
+                      href="#projects"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl mono font-semibold bg-syntax-blue text-white hover:bg-[#4493f8] transition-all glow-blue w-full"
+                    >
+                      <span aria-hidden className="text-base leading-none">
+                        ✦
+                      </span>
+                      See my work
+                    </a>
+
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl mono font-semibold border border-[#30363d] bg-[#161b22]/60 text-[#c9d1d9] hover:border-syntax-cyan/60 hover:text-syntax-cyan transition-colors w-full"
+                    >
+                      Get in touch
+                      <span aria-hidden className="text-base leading-none">
+                        →
+                      </span>
+                    </a>
+
+                    <div className="sm:col-span-2 rounded-xl border border-[#30363d] bg-gradient-to-r from-[#bc8cff0f] via-[#58a6ff0a] to-[#39c5cf0f] p-3 overflow-hidden">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <div className="min-w-0">
+                          <div className="mono text-[11px] uppercase tracking-wider text-syntax-yellow">
+                            Resume
+                          </div>
+                          <div className="text-sm text-[#c9d1d9] mt-1">
+                            Open the PDF or download a copy.
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-2">
+                          <a
+                            href={RESUME_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl mono font-semibold border border-[#30363d] bg-[#0d1117]/45 text-[#c9d1d9] hover:border-syntax-purple/60 hover:text-syntax-purple hover:bg-[#0d1117]/65 transition-colors"
+                          >
+                            View
+                            <span
+                              aria-hidden
+                              className="text-base leading-none"
+                            >
+                              ↗
+                            </span>
+                          </a>
+                          <a
+                            href={RESUME_URL}
+                            download
+                            className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl mono font-semibold border border-[#30363d] bg-[#0d1117]/45 text-[#c9d1d9] hover:border-syntax-cyan/60 hover:text-syntax-cyan hover:bg-[#0d1117]/65 transition-colors"
+                          >
+                            Download
+                            <span
+                              aria-hidden
+                              className="text-base leading-none"
+                            >
+                              ⤓
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -712,22 +767,22 @@ export default function Home() {
             </div>
 
             {/* Portrait */}
-            <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-slide-up">
-              <div className="relative hero-float">
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-slide-up w-full">
+              <div className="relative hero-float w-full max-w-[520px] lg:max-w-none">
                 <div className="absolute -inset-6 sm:-inset-8 rounded-[2rem] bg-gradient-to-br from-[#bc8cff]/35 via-[#58a6ff]/10 to-transparent blur-2xl" />
-                <div className="relative w-[min(100%,440px)] sm:w-[500px]">
+                <div className="relative w-full max-w-[440px] sm:max-w-none sm:w-[500px] mx-auto lg:mx-0">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-2xl shadow-[#bc8cff]/10 bg-gradient-to-b from-[#2a2438] via-[#1a1525] to-[#161b22]">
                     <Image
                       src="/profile-pic.png"
                       alt="Dagmawi Kindu Mekonnen"
                       fill
                       className="object-cover object-[center_18%] scale-[1.02]"
-                      sizes="(max-width: 640px) 440px, 500px"
+                      sizes="(max-width: 640px) 90vw, 500px"
                       priority
                     />
                   </div>
 
-                  <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 sm:-left-8 w-[calc(100%-1rem)] sm:w-56 terminal-window px-4 py-3 shadow-xl border-syntax-cyan/30">
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 sm:-bottom-5 sm:left-0 sm:translate-x-0 sm:-left-8 w-[calc(100%-1.25rem)] sm:w-56 terminal-window px-4 py-3 shadow-xl border-syntax-cyan/30">
                     <div className="mono text-[10px] uppercase tracking-wider text-syntax-yellow mb-1">
                       Approach
                     </div>
@@ -1202,6 +1257,144 @@ export default function Home() {
                   <p className="text-sm text-[#8b949e] leading-relaxed">
                     {ABOUT_DETAILS.certifications[0]}
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resume Section */}
+      <section id="resume" className="py-32 px-4 sm:px-6 lg:px-8 bg-[#161b22]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <div className="mono text-syntax-yellow text-sm mb-4">
+              {"// Resume"}
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              <span className="font-sans">My</span>
+              <span className="mono text-syntax-cyan"> Resume</span>
+            </h2>
+            <p className="text-[#8b949e] max-w-2xl mx-auto">
+              Prefer a PDF? Grab the latest version, or open it in a new tab.
+            </p>
+          </div>
+
+          <div className="terminal-window overflow-hidden p-0">
+            <div className="grid lg:grid-cols-[1.2fr_0.8fr]">
+              <div className="p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-[#21262d]">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0">
+                    <div className="mono text-xs uppercase tracking-wider text-syntax-cyan mb-2">
+                      PDF
+                    </div>
+                    <div className="text-xl sm:text-2xl font-bold text-[#e6edf3] truncate">
+                      Dagmawi Kindu Mekonnen
+                    </div>
+                    <div className="mono text-xs text-[#8b949e] mt-2 break-all">
+                      {RESUME_URL}
+                    </div>
+                  </div>
+                  <div className="hidden sm:flex items-center gap-2 shrink-0">
+                    <span className="mono text-[11px] px-2.5 py-1 rounded-full border bg-syntax-cyan/10 text-syntax-cyan border-syntax-cyan/30">
+                      Updated
+                    </span>
+                    <span className="mono text-[11px] px-2.5 py-1 rounded-full border bg-[#0d1117]/40 text-[#8b949e] border-[#30363d]">
+                      ATS-friendly
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid sm:grid-cols-2 gap-3">
+                  <a
+                    href={RESUME_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group rounded-lg border border-[#30363d] bg-[#0d1117]/40 px-4 py-4 hover:border-syntax-purple/60 transition-colors"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <div>
+                        <div className="mono text-sm font-semibold text-syntax-purple">
+                          View in new tab
+                        </div>
+                        <div className="text-xs text-[#8b949e] mt-1">
+                          Quick preview in browser
+                        </div>
+                      </div>
+                      <span
+                        className="mono text-syntax-purple text-lg group-hover:translate-x-0.5 transition-transform"
+                        aria-hidden
+                      >
+                        ↗
+                      </span>
+                    </div>
+                  </a>
+
+                  <a
+                    href={RESUME_URL}
+                    download
+                    className="group rounded-lg border border-[#30363d] bg-[#0d1117]/40 px-4 py-4 hover:border-syntax-cyan/60 transition-colors"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <div>
+                        <div className="mono text-sm font-semibold text-syntax-cyan">
+                          Download PDF
+                        </div>
+                        <div className="text-xs text-[#8b949e] mt-1">
+                          Save it to your device
+                        </div>
+                      </div>
+                      <span
+                        className="mono text-syntax-cyan text-lg group-hover:translate-y-0.5 transition-transform"
+                        aria-hidden
+                      >
+                        ⤓
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8">
+                <div className="mono text-xs uppercase tracking-wider text-syntax-yellow mb-4">
+                  Recruiter notes
+                </div>
+                <ul className="space-y-3 text-sm text-[#c9d1d9] leading-relaxed">
+                  <li className="flex gap-3">
+                    <span className="mono text-syntax-blue shrink-0 mt-0.5">
+                      ›
+                    </span>
+                    <span>
+                      Full-stack focus:{" "}
+                      <span className="text-syntax-cyan">.NET</span>,{" "}
+                      <span className="text-syntax-orange">NestJS</span>,{" "}
+                      <span className="text-syntax-blue">Next.js</span>,{" "}
+                      <span className="text-syntax-green">Flutter</span>
+                    </span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mono text-syntax-blue shrink-0 mt-0.5">
+                      ›
+                    </span>
+                    <span>Fintech, streaming, and admin dashboards</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mono text-syntax-blue shrink-0 mt-0.5">
+                      ›
+                    </span>
+                    <span>
+                      Clean APIs, scalable systems, and reliable delivery
+                    </span>
+                  </li>
+                </ul>
+
+                <div className="mt-6 rounded-lg border border-[#30363d] bg-[#0d1117]/35 p-4">
+                  <div className="mono text-[11px] text-[#8b949e]">
+                    Tip: link this directly in applications
+                  </div>
+                  <div className="mono text-xs text-syntax-cyan mt-2 break-all">
+                    {RESUME_URL}
+                  </div>
                 </div>
               </div>
             </div>
